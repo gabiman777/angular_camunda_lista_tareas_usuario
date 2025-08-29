@@ -1,0 +1,15 @@
+<p>form-analizar-evento-y-contactar-corredor funciona!</p>
+<h2>Formulario: Analizar Evento y Contactar al Corredor</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Análisis del Evento:</label>
+    <textarea formControlName="analisisEvento"></textarea>
+  </div>
+  <div>
+    <label>Detalles de Contacto al Corredor:</label>
+    <input type="text" formControlName="contactoCorredor">
+  </div>
+  <!-- Agrega más campos aquí -->
+  <button type="submit" [disabled]="!form.valid">Completar Tarea</button>
+  <button type="button" (click)="cancel()">Cancelar</button>
+</form>

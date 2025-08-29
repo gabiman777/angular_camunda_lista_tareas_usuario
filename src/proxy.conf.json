@@ -1,0 +1,9 @@
+{
+  "/camunda-api": {
+    "target": "https://jfk-1.tasklist.camunda.io/9391078c-1325-46fa-bda0-129b54fca5b6",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": { "^/camunda-api": "" }
+  }
+}
