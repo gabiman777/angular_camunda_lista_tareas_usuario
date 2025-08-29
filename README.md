@@ -12,3 +12,5 @@ https://webextension.org/listing/access-control.html
 
 # Ejecutar servidor Angular local
 ng serve -o
+
+# En el navegador te abrirá el proyecto y mostrará la lista de tareas activas del cluster de Camnunda
