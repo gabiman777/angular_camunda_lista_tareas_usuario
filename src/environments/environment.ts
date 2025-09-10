@@ -2,11 +2,11 @@ export const environment = {
   production: false,
   camunda: {
     region: 'jfk-1',
-    clusterId: '9391078c-1325-46fa-bda0-129b54fca5b6',
-    clientId: '1kBZ97ZbY9v~LD6HWt3g8_~9RekeO__f', // Reemplaza con tu client_id
-    clientSecret: 'pLXkApFKGebI10Wd0VnxJfo0aJulzQCiWI_6nxx9MnqeenRQkKB9PKniSC6gy-5v', // Reemplaza con tu client_secret
+    clusterId: '4ab7e882-7690-46d9-b810-ac3fa29308de',
+    clientId: 'bYFYL5Gg35VCRHyUJe_MQw_~gsgaHlfq',
+    clientSecret: 'SKsGp_Z2JsgBeLa7MVi1mx0Lk0-77kE52Ua0vmFv-dTTxBZ3TKeWBV0EXH6MyK~Y',
     oauthUrl: 'https://login.cloud.camunda.io/oauth/token',
-    //tasklistBaseUrl: 'https://jfk-1.tasklist.camunda.io/9391078c-1325-46fa-bda0-129b54fca5b6',
     tasklistBaseUrl: '/camunda-api', // Proxied path
+    //tasklistBaseUrl: 'https://jfk-1.tasklist.camunda.io/4ab7e882-7690-46d9-b810-ac3fa29308de',
   },
 };

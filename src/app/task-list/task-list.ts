@@ -50,7 +50,7 @@ import { TasklistService } from '../services/tasklist';
   selector: 'app-task-list',
   imports: [CommonModule],
   template: `
-    <p>Componente Task-list funciona!</p>
+    <p>Componente Task-list funciona</p>
     <h2>Bandeja de Tareas</h2>
     <div *ngIf="error" style="color: red;">{{ error }}</div>
     <ul>
@@ -82,7 +82,8 @@ export class TaskListComponent implements OnInit {
   }
 
   selectTask(task: any) {
-    if (task.formKey === 'postemision_analizar_evento_y_contactar_corredor') {
+    //if (task.formKey === 'postemision_analizar_evento_y_contactar_corredor') {
+    if (task.formId === 'enter-message-email') {
       this.tasklistService
         .claimTask(task.id)
         .subscribe({
@@ -98,7 +99,7 @@ export class TaskListComponent implements OnInit {
     }
     //TODO. agregar todos los IFs para cada tipo de formulario, para todas las tareas de usuarios que haya en el proceso
     /*
-    else if (task.formKey === 'postemision_validar_documentacion') {
+    else if (task.formId === 'postemision_validar_documentacion') {
       this.tasklistService
         .claimTask(task.id)
         .subscribe({
@@ -111,7 +112,7 @@ export class TaskListComponent implements OnInit {
             this.error = 'Error claiming task: ' + err.message;
           },
         });
-    } else if (task.formKey === 'postemision_revision_final') {
+    } else if (task.formId === 'postemision_revision_final') {
       this.tasklistService
         .claimTask(task.id)
         .subscribe({
