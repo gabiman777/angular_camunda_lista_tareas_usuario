@@ -5,12 +5,12 @@ import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-form-analizar-evento-y-contactar-corredor',
+  selector: 'app-parametrizacion-extraccion-candidatos',
   imports: [ReactiveFormsModule],
-  templateUrl: './form-analizar-evento-y-contactar-corredor.html',
-  styleUrl: './form-analizar-evento-y-contactar-corredor.css'
+  templateUrl: './parametrizacion-extraccion-candidatos.html',
+  styleUrl: './parametrizacion-extraccion-candidatos.css'
 })
-export class FormAnalizarEventoComponent implements OnInit {
+export class FormParamExtraccionCandidatosComponent implements OnInit {
   form!: FormGroup;
   taskId: string;
   variables: any; // Variables de la tarea (e.g., datos pre-cargados)

@@ -48,7 +48,7 @@ export class CamundaService {
     });
   }
 
-  // Opcional: Claim la tarea si es necesario
+  // Opcional: Reclamar la tarea si es necesario
   claimTask(taskId: string) {
     return this.apollo.mutate({
       mutation: gql`

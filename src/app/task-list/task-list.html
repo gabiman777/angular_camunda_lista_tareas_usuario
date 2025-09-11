@@ -1,9 +1,36 @@
-<p>Componente Task-list funciona!</p>
-<h2>Bandeja de Tareas</h2>
+<h2>Fidren Renovaciones - Bandeja de Tareas</h2>
 <div *ngIf="error" style="color: red;">{{ error }}</div>
-<ul>
-  <li *ngFor="let task of tasks">
-    {{ task.name }} (ID: {{ task.id }})
-    <button (click)="selectTask(task)">Seleccionar</button>
-  </li>
-</ul>
+<div class="filter-container">
+  <div class="filter-group">
+    <label for="stateFilter">Estado:</label>
+    <select id="stateFilter" [(ngModel)]="filters.state" (change)="applyFilters()">
+      <option value="">Todos</option>
+      <option value="CREATED">Pendiente</option>
+      <option value="COMPLETED">Completada</option>
+    </select>
+  </div>
+  <br/>
+  <div class="filter-group">
+    <label for="assigneeFilter">Asignado a:</label>
+    <input id="assigneeFilter" type="email" [(ngModel)]="filters.assignee" (input)="applyFilters()" placeholder="Ingrese email">
+  </div>
+</div>
+<br/><br/>
+<div class="table-container">
+  <div class="table-header">
+    <div class="table-cell">ID Proceso</div>
+    <div class="table-cell">ID Tarea*</div>
+    <div class="table-cell">Tarea</div>
+    <div class="table-cell">Fecha Creación</div>
+    <div class="table-cell">Acciones</div>
+  </div>
+  <div class="table-row" *ngFor="let task of tasks | async">
+    <div class="table-cell">{{ task.processInstanceKey }}</div>
+    <div class="table-cell">{{ task.id }}</div>
+    <div class="table-cell">{{ task.name }}</div>
+    <div class="table-cell">{{ task.creationDate | date:'dd/MM/yyyy' }}</div>
+    <div class="table-cell">
+      <a href="javascript:void(0)" (click)="selectTask(task)">Abrir</a>
+    </div>
+  </div>
+</div>
