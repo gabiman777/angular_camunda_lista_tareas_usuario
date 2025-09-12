@@ -3,12 +3,16 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CamundaService } from '../services/camunda.service';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { APOLLO_OPTIONS } from 'apollo-angular';
+import { HttpLink } from 'apollo-angular/http';
+import { InMemoryCache } from '@apollo/client/core';
 
 @Component({
   selector: 'app-parametrizacion-extraccion-candidatos',
   imports: [ReactiveFormsModule],
   templateUrl: './parametrizacion-extraccion-candidatos.html',
-  styleUrl: './parametrizacion-extraccion-candidatos.css'
+  styleUrl: './parametrizacion-extraccion-candidatos.css',
+  standalone: true
 })
 export class FormParamExtraccionCandidatosComponent implements OnInit {
   form!: FormGroup;
@@ -17,7 +21,7 @@ export class FormParamExtraccionCandidatosComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private camundaService: CamundaService,
+    //private camundaService: CamundaService,
     private router: Router,
     private location: Location
   ) {
@@ -48,6 +52,12 @@ export class FormParamExtraccionCandidatosComponent implements OnInit {
         // Agrega más variables según sea necesario
       ];
 
+      /*
+       * TODO. pendiente activar cuando se integre Camunda project con frontend de parametrizacion
+       * cuando se necesite Submitear el formulario, se debe completar la tarea en Camunda
+       * usando el servicio CamundaService y pasando las variables del formulario.
+       *
+       * Ejemplo:
       this.camundaService.completeTask(this.taskId, variables).subscribe(
         () => {
           alert('Tarea completada exitosamente');
@@ -55,6 +65,7 @@ export class FormParamExtraccionCandidatosComponent implements OnInit {
         },
         error => console.error('Error al completar tarea:', error)
       );
+      */
     }
   }
 

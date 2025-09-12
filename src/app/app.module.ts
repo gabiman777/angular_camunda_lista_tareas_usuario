@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { TaskListComponent } from './task-list/task-list';
 import { FormParamExtraccionCandidatosComponent } from './parametrizacion-extraccion-candidatos/parametrizacion-extraccion-candidatos';
 // Agrega otros imports...
+import { APOLLO_OPTIONS } from 'apollo-angular';
+import { HttpLink } from 'apollo-angular/http';
+import { InMemoryCache } from '@apollo/client/core';
 
 @NgModule({
   declarations: [ ],
