@@ -17,6 +17,7 @@ export class AuthService {
     if (this.isTokenValid()) {
       return this.tokenSubject.asObservable() as Observable<string>;
     } else {
+      //Se obtiene access_token dinámico. El buffer de expiración es de 5 min antes de refrescar
       return this.fetchToken().pipe(map((response) => response.access_token));
     }
   }
