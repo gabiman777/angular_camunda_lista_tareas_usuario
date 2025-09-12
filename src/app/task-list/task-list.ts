@@ -73,12 +73,12 @@ export class TaskListComponent implements OnInit, OnDestroy {
 
   selectTask(task: any) {
     if (task.formKey === 'parametrizacion-extraccion-candidatos') {
-      this.router.navigate(['parametrizacion-extraccion'], /*{
+      this.router.navigate(['parametrizacion-extraccion'], {
         state: { taskId: task.id, variables: task.variables },
-      }*/
+      }
      );
     }
-    /*TODO. borrar bloque. version1, no se necesita hacer el claim
+    /*TODO. borrar bloque. version1, no se necesita hacer el claim de la tarea
     selectTask(task: any) {
       if (task.formKey === 'parametrizacion-extraccion-candidatos') {
         this.tasklistService
