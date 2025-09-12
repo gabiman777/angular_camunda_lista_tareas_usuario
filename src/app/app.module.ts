@@ -8,7 +8,7 @@ import { FormParamExtraccionCandidatosComponent } from './parametrizacion-extrac
 
 @NgModule({
   declarations: [ ],
-  imports: [BrowserModule, GraphQLModule, HttpClientModule],
+  imports: [BrowserModule, GraphQLModule, HttpClientModule ],
   providers: [],
   bootstrap: []
 })

@@ -25,6 +25,7 @@ export class TaskListComponent implements OnInit, OnDestroy {
   constructor(private tasklistService: TasklistService, private router: Router) {}
 
   ngOnInit() {
+    console.log('TaskListComponent initialized');
     // Suscribirse al Subject para manejar cambios en assignee con debounce
     this.assigneeSubject.pipe(
       debounceTime(300), // Espera 300ms después de que el usuario deje de escribir
@@ -35,6 +36,7 @@ export class TaskListComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
+    console.log('TaskListComponent destroyed');
     // Limpiar la suscripción para evitar memory leaks
     this.assigneeSubject.complete();
   }
