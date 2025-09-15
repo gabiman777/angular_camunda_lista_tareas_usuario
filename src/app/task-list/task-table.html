@@ -1,0 +1,19 @@
+<div *ngIf="error" style="color: red;">{{ error }}</div>
+<div class="table-container">
+  <div class="table-header">
+    <div class="table-cell">ID Proceso</div>
+    <div class="table-cell">ID Tarea*</div>
+    <div class="table-cell">Tarea</div>
+    <div class="table-cell">Fecha Creación</div>
+    <div class="table-cell">Acciones</div>
+  </div>
+  <div class="table-row" *ngFor="let task of tasks | async">
+    <div class="table-cell">{{ task.processInstanceKey }}</div>
+    <div class="table-cell">{{ task.id }}</div>
+    <div class="table-cell">{{ task.name }}</div>
+    <div class="table-cell">{{ task.creationDate | date:'dd/MM/yyyy' }}</div>
+    <div class="table-cell">
+      <a href="javascript:void(0)" (click)="selectTask(task)">Abrir</a>
+    </div>
+  </div>
+</div>

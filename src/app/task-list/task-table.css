@@ -1,0 +1,24 @@
+.table-container {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-header, .table-row {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-cell {
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+}
+
+.table-header {
+  font-weight: bold;
+  background-color: #f4f4f4;
+}
+
+.table-row:hover {
+  background-color: #f9f9f9;
+}

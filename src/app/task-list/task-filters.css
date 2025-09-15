@@ -1,0 +1,22 @@
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-group label {
+  font-weight: bold;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

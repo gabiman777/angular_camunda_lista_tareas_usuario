@@ -1,0 +1,15 @@
+<div class="filter-container">
+  <div class="filter-group">
+    <label for="stateFilter">Estado:</label>
+    <select id="stateFilter" [(ngModel)]="filters.state" (change)="onStateChange()">
+      <option value="">Todos</option>
+      <option value="CREATED">Pendiente</option>
+      <option value="COMPLETED">Completada</option>
+    </select>
+  </div>
+  <br/>
+  <div class="filter-group">
+    <label for="assigneeFilter">Asignado a:</label>
+    <input id="assigneeFilter" type="email" [(ngModel)]="filters.assignee" (input)="onAssigneeChange($event.target.value)" placeholder="Ingrese email">
+  </div>
+</div>
