@@ -56,5 +56,6 @@ export class TaskTableComponent implements OnChanges {
     } else {
       console.log('Formulario no implementado para formKey:', task.formKey);
     }
+    //TODO. aqui manejar otros formKeys, el formKey se asigna en las tareas de usuario de Camunda
   }
 }
