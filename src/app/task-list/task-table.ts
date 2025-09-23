@@ -42,7 +42,7 @@ export class TaskTableComponent implements OnChanges {
 
     this.tasks = this.tasklistService.searchTasks(filterParams).pipe(
       catchError((error) => {
-        this.error = 'Error loading tasks: ' + error.message;
+        this.error = 'Error cargando tareas de usuario: ' + error.message;
         return of([]);
       })
     );
